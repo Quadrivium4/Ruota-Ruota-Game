@@ -1,0 +1,509 @@
+::-webkit-scrollbar {
+    display: none;
+}
+body{
+    background-color: rgb(34, 35, 94);
+    display: flex;
+    flex-direction: column;
+}
+#finish-page{
+    align-self: center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+   
+}
+#finish-title{
+    font-size: 7vh;
+    color: rgb(42, 161, 165);
+}
+#man{
+   width: 30vh;
+   height: 50vh;
+   background-color: rgba(0, 255, 255, 0);
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    margin-left: 180vw;
+    animation-name: move-man;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+}
+@keyframes move-man{
+    0%{
+        margin-left: -70vw;
+    }
+    
+    100%{
+        margin-left: 180vw;
+    }
+}
+#man-head{
+   width: 6vh;
+   height: 7vh;
+   background-color: bisque;
+   border-radius: 50%;
+}
+#head-eye1{
+    margin-top: 2vh;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    margin-left: 1vh;
+}
+#head-eye2{
+    margin-top: -1vh;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    margin-left: 4vh;
+}
+#head-mouth{
+    width: 2vh;
+    height: 0.2vh;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    margin-left: 2vh;
+    margin-top: 1.5vh;
+}
+#man-body{
+    width: 7vh;
+    height: 15vh;
+    border-radius: 1vh 1vh 0vh 0vh;
+    background-color: cadetblue;
+}
+#man-arm1{
+    width: 2vh;
+    height: 10vh;
+    margin-top: -14vh;
+    margin-left: 5vh;
+    border-radius: 1vh 1vh 0vh 0vh;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end; 
+    transform-origin: top center;
+    transform: rotateZ(-10deg);
+    animation-name: move-arm1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes move-arm1{
+    0%{
+        transform-origin: top center;
+        transform: rotateZ(-10deg);
+    }
+    50%{
+        transform-origin: top center;
+        transform: rotateZ(-160deg);
+    }
+    100%{
+        transform-origin: top center;
+        transform: rotateZ(-10deg);
+    }
+}
+#man-arm2{
+    width: 2vh;
+    height: 10vh;
+    margin-top: -10vh;
+    margin-left: -5vh;
+    background-color: red; 
+    border-radius: 1vh 1vh 0vh 0vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    transform-origin: top center;
+    transform: rotateZ(10deg); 
+    animation-name: move-arm2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes move-arm2{
+    0%{
+        transform-origin: top center;
+        transform: rotateZ(10deg);
+    }
+    50%{
+        transform-origin: top center;
+        transform: rotateZ(160deg);
+    }
+    100%{
+        transform-origin: top center;
+        transform: rotateZ(10deg);
+    }
+}
+#man-hand1{
+    width: 2vh;
+    height: 2vh;
+    background-color: bisque;
+    border-radius: 1vh 1vh 0vh 0vh; 
+    margin-bottom: -2vh;
+    animation-name: move-hands;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#man-hand2{
+    width: 2vh;
+    height: 2vh;
+    background-color: bisque;
+    border-radius: 1vh 1vh 0vh 0vh;
+    margin-bottom: -2vh;
+    transform-origin: top center;
+    animation-name: move-hands;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes move-hands{
+    0%{
+        transform-origin: top center;
+        transform: rotateZ(0deg);
+    }
+    30%{
+        transform-origin: top center;
+        transform: rotateZ(10deg);
+    }
+    60%{
+        transform-origin: top center;
+        transform: rotateZ(-10deg);
+    }
+    100%{
+        transform-origin: top center;
+        transform: rotateZ(0deg);
+    }  
+}
+#man-leg1{
+    width: 2vh;
+    height: 13vh;
+    margin-top: 3.5vh;
+    margin-left: 5vh;
+    background-color: red;
+    z-index: -1;
+    transform-origin: top center;
+    transform: rotateZ(-10deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    animation-name: move-leg1;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+
+}
+@keyframes move-leg1{
+    0%{
+        transform-origin: top center;
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform-origin: top center;
+        transform: rotateZ(-35deg);
+    }
+    100%{
+        transform-origin: top center;
+        transform: rotateZ(0deg);
+    }
+}
+#man-leg2{
+    width: 2vh;
+    height: 13vh;
+    margin-top: -13vh;
+    margin-left: -5vh;
+    background-color: red; 
+    z-index: -1;
+    display: flex;
+    transform-origin: top center;
+    transform: rotateZ(25deg);
+    flex-direction: column;
+    justify-content: end;
+    animation-name: move-leg2;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes move-leg2{
+    0%{
+        transform-origin: top center;
+        transform: rotateZ(25deg);
+    }
+    50%{
+        transform-origin: top center;
+        transform: rotateZ(-20deg);
+    }
+    100%{
+        transform-origin: top center;
+        transform: rotateZ(25deg);
+    }
+}
+#man-foot1{
+    width: 3vh;
+    height: 2vh;
+    background-color: rgb(0, 0, 0);  
+    margin-bottom: -2vh;
+}
+#man-foot2{
+    width: 3vh;
+    height: 2vh;
+    background-color: rgb(0, 0, 0); 
+    margin-bottom: -2vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#main-page{
+    display: none;
+    flex-direction: column;
+}
+#start-page{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+#start-title{
+    margin-top: 20vh;
+    color: rgb(42, 161, 165);
+    font-size: 6vh;
+}
+#start-subtitle{
+    color: rgb(102, 65, 22);
+    font-size: 4vh;
+}
+#start-subtitle1{
+    color: rgb(51, 88, 8);
+    font-size: 3vh;
+}
+#start-but{
+    margin-top: 10vh;
+    background-color: rgb(168, 23, 23);
+    font-size: 4vh;
+}
+#title{
+    background-color: rgb(34, 35, 94);
+    color: darkcyan;
+    align-self: center;
+
+}
+#container{
+    background-color: rgb(42, 161, 165);
+    align-self: center;
+    height: 80vh;
+    width: 100vw;
+   
+}
+#floor{
+    position: absolute;
+    background-color: rgb(102, 65, 22);
+    width: 100vw;
+    height: 25vh;
+    margin-top: 65vh;
+}
+#top{
+    display: flex;
+    flex-direction: column;
+}
+#restart{
+    align-self: flex-end;
+    margin-top: -5vh;
+    width: 10vh;
+    height: 5vh;
+    background-color: darkcyan;
+    color: rgb(71, 54, 12);
+}
+#box-but{
+    position: absolute;
+    background-color: rgb(168, 23, 23);
+    justify-self: end;
+    align-self: center;
+    margin-top: 9.5vh;
+    width: 20vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#char{
+    position: absolute;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    background-color: burlywood;
+    margin-top: 60vh;
+    animation-name: rot;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#rad1{
+    width: 5vh;
+    height: 0.5vh; 
+    background-color: black; 
+    margin-top: 2.25vh;
+}
+#rad2{
+    margin-top: -0.5vh;
+    width: 5vh;
+    height: 0.5vh; 
+    background-color: black; 
+    transform: rotateZ(90deg);
+}
+@keyframes rot{
+    0%{
+
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+
+
+#tree-lives{
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+    background-color: green;
+    border-radius: 40%;
+    margin-bottom: 8vh;
+}
+#tree-fus{
+    position: absolute;
+    width: 2vh;
+    height: 8vh;
+    background-color: rgb(128, 92, 17);
+    
+}
+.tree{
+    position: absolute;
+    width: 4vh;
+    height: 10vh;
+    background-color: transparent;
+    margin-top: 55vh;
+    margin-left: 92vw; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+.car{
+    position: absolute;
+    width: 12vh;
+    height: 5vh;
+    background-color: rgba(255, 0, 0, 0);
+    margin-top: 60vh;
+    margin-left: 70vw; 
+    display: flex;
+    flex-direction: column;
+    justify-content: end; 
+}
+#car-weel1{
+    position: absolute;
+    width: 2vh;
+    height: 2vh;
+    border-radius: 50%;
+    margin-left: 2vh;
+    background-color: rgb(0, 0, 0);
+}
+#car-weel2{
+    position: absolute;
+    width: 2vh;
+    height: 2vh;
+    border-radius: 50%;
+    margin-left: 8vh;
+    background-color: rgb(0, 0, 0);
+}
+#car-body{
+    position: absolute;
+    width: 12vh;
+    height: 2vh;
+    background-color: violet;
+    margin-bottom: 0.7vh;
+    border-radius: 1vh 0px 1vh 0px;
+}
+#car-body1{
+    position: absolute;
+    width: 4vh;
+    height: 0vh;
+    margin-left: 3vh;
+    margin-bottom: 2.7vh;
+    border-bottom: 1.3vh solid rgb(74, 71, 255);
+    border-left: 1vh solid transparent;
+    border-right: 1vh solid transparent;
+}
+.house{
+    position: absolute;
+    width: 12vh;
+    height: 12vh;
+    background-color: rgba(51, 255, 0, 0);
+    margin-top: 53vh;
+    margin-left: 50vw; 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: end; 
+}
+#house-body{
+    background-color: rgb(255, 174, 0); 
+    width: 8vh;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: end;
+}
+#house-door{
+    background-color: rgb(66, 53, 24); 
+    width: 3vh;
+    height: 5vh;   
+}
+#house-tet{
+    position: absolute;
+    height: 0vh;
+    margin-bottom: 7vh;
+    border-bottom: 3vh solid rgb(121, 0, 0);
+    border-left: 4vh solid transparent;
+    border-right: 4vh solid transparent;
+}
+#house-cam{
+    position: absolute;
+    background-color: rgb(0, 0, 0); 
+    width: 1vh;
+    height: 2vh;
+    margin-bottom: 8vh;
+    margin-left: 3vh;
+    
+}
